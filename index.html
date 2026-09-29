@@ -471,17 +471,17 @@
             <h2>Commandes de Pain & Viennoiseries</h2>
             <p>
                 Commandez votre pain, vos viennoiseries ou votre journal pour le dimanche matin[cite: 1].<br>
-                Nos produits proviennent de la <strong>boulangerie d’Olivier BILLAUD</strong>[cite: 1].
+                Nos produits proviennent de la <strong>boulangerie d’Olivier BILLAUD</strong> à Doazit.
             </p>
 
-            <!-- Formulaire d'envoi d'email via Formsubmit/Formspree à lou.bam40@gmail.com -->
-            <form action="https://formsubmit.co/lou.bam40@gmail.com" method="POST" style="margin-top: 20px; max-width: 600px; display: flex; flex-direction: column; gap: 20px;">
+            <!-- Formulaire Web3Forms -->
+            <form action="https://api.web3forms.com/submit" method="POST" style="margin-top: 20px; max-width: 600px; display: flex; flex-direction: column; gap: 20px;">
                 
-                <!-- Redirection et configuration FormSubmit -->
-                <input type="hidden" name="_subject" value="Nouvelle commande de pain - Lou BAM">
-                <input type="hidden" name="_captcha" value="false">
+                <!-- Clé Web3Forms (A Remplacer) -->
+                <input type="hidden" name="access_key" value="0b07bf80-a20c-4e12-b8b7-cb1a301878e7">
+                <input type="hidden" name="subject" value="Nouvelle commande de pain - Lou BAM">
+                <input type="hidden" name="from_name" value="Site Web Lou BAM">
 
-                
                 <!-- Informations du client -->
                 <div style="background-color: var(--bg-color); padding: 15px; border-radius: 6px; display: flex; flex-direction: column; gap: 12px;">
                     <h3 style="color: var(--primary-color); font-size: 1.1rem;">Vos coordonnées</h3>
@@ -493,9 +493,9 @@
 
                     <div style="display: flex; flex-direction: column; gap: 5px;">
                         <label for="mail" style="font-weight: 600;">adresse mail * :</label>
-                        <input type="text" id="mail" name="adresse mail" required placeholder="Ex. Jea.Dupont@lou.bam.fr" style="padding: 10px; border: 1px solid #ccc; border-radius: 4px;">
+                        <input type="text" id="mail" name="adresse mail" required placeholder="Ex. Jean.Dupont@lou.bam.fr" style="padding: 10px; border: 1px solid #ccc; border-radius: 4px;">
                     </div>
-                    
+
                     <div style="display: flex; flex-direction: column; gap: 5px;">
                         <label for="telephone" style="font-weight: 600;">Numéro de téléphone * :</label>
                         <input type="tel" id="telephone" name="Telephone" required placeholder="Ex. 06 00 00 00 00" style="padding: 10px; border: 1px solid #ccc; border-radius: 4px;">
