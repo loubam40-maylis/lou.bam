@@ -1,0 +1,1 @@
+Lou BAM (bar associatif Maylisien) est une association qui organise des évènement festifs, culturels et sportives (amateur et sans compétition). De plus, cette associton propose un débit de boisson et un dépôt de pain tous les dimanches matins
