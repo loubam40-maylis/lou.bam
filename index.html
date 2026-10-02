@@ -25,8 +25,29 @@
             background-color: var(--bg-color);
             color: var(--text-color);
         }
+       /* CODE DES RUBANS FIXES DANS LES MARGES (CORRIGÉ) */
+        .ruban-gauche, .ruban-droite {
+            position: fixed;
+            top: 0; 
+            bottom: 0;
+            width: 60px; /* Largeur d'affichage de votre ruban */
+            background-repeat: repeat-y;
+            background-size: 100% auto;
+            z-index: 1; /* Reste en arrière-plan */
+            pointer-events: none; /* Permet de cliquer à travers si le texte passe dessous */
+        }
 
-        /* En-tête et Navigation */
+        .ruban-gauche {
+            left: 20px; /* Distance du bord gauche */
+            background-image: url('images/ruban-rose.png');
+        }
+
+        .ruban-droite {
+            right: 20px; /* Distance du bord droit */
+            background-image: url('images/ruban-rose.png');
+        }
+      
+	  /* En-tête et Navigation */
         header {
             background-color: var(--light-bg);
             box-shadow: 0 2px 5px rgba(0,0,0,0.1);
@@ -101,6 +122,8 @@
             max-width: 1100px;
             margin: 40px auto;
             padding: 0 20px;
+	    position: relative;
+            z-index: 5; /* Force le texte à rester au-dessus des rubans */
         }
 
         section {
@@ -125,6 +148,16 @@
             margin: 15px 0 10px 0;
             font-size: 1.2rem;
         }
+	/* Style spécifique pour l'alerte de la marche rose */
+        .pink-alert {
+            background-color: #FFF1F2;
+            border-left: 5px solid var(--highlight-pink);
+            padding: 15px;
+            border-radius: 4px;
+            font-size: 1.2rem;
+            font-weight: bold;
+            color: #9F1239;
+            text-align: center;
 
         /* Grille commune uniforme (Modèle basé sur l'Accueil) */
         .section-grid {
@@ -269,7 +302,10 @@
 
         /* Design adaptatif mobile */
         @media (max-width: 768px) {
-            .header-container {
+            .ruban-gauche, .ruban-droite {
+                display: none; /* Cache les rubans sur mobile */
+}
+              .header-container {
                 flex-direction: column;
             }
             nav ul {
@@ -292,7 +328,8 @@
             </div>
             <nav>
                 <ul>
-                    <li><a href="#accueil">Accueil</a></li>
+                    <li><a href="#informations">Informations</a></li>
+		    <li><a href="#accueil">Accueil</a></li>
                     <li><a href="#manifestations">Manifestations</a></li>
                     <li><a href="#agenda">Agenda</a></li>
                     <li><a href="#galerie">Galeries</a></li>
@@ -306,11 +343,19 @@
     <!-- Section Héro -->
     <div class="hero">
         <h1>Bienvenue au BAM</h1>
-        <img src="./images/logo.jpg" alt="Logo Lou BAM bar associatif maylisien" style="max-height: 100px; width: auto; margin-left: auto;">
+        <img src="./images/logo.jpg" alt="Logo Lou BAM" style="max-height: 100px; width: auto; margin-left: auto;">
        <p>Le bar associatif Maylisien.</p>
     </div>
 
     <div class="container">
+	
+	<!-- Nouvelle Section Informations -->
+        <section id="informations">
+            <h2>Informations</h2>
+            <div class="pink-alert">
+                🎀 Marche rose à MAYLIS le samedi 31 octobre 2026.
+            </div>
+        </section>
 
         <!-- Section Accueil -->
         <section id="accueil">
@@ -354,7 +399,7 @@
         <!-- Section Agenda -->
         <section id="Agenda">
             <h2>Agenda</h2>
-     <h3 style="margin-top:20px; color: var(--primary-color);">Prochaine manifestation : Le 31 octobre OCTOBRE ROSE :</h3>
+     <h3 style="margin-top:20px; color: var(--primary-color);">Prochaine manifestation : Le 31 octobre OCTOBRE ROSE : à inscrire sur vos agendas</h3>
      
             <div class="about-grid">
                 <div class="about-text">
@@ -368,7 +413,7 @@
                 <!-- Photo 7 -->
                 <div class="gallery-item" style="max-width: 220px;">
                     <a href="./images/26rose.jpg" target="_blank" title="Cliquer pour ouvrir en taille réelle">
-                        <img src="./images/26rose.jpg" alt="Octobre rose à Maylis - Photo 7" style="width: 100%; height: auto; display: block; border-radius: 6px; transition: transform 0.2s;">
+                        <img src="./images/26rose.jpg" alt="Octobre rose - Photo 7" style="width: 100%; height: auto; display: block; border-radius: 6px; transition: transform 0.2s;">
                     </a>
                  <!-- Titre sous la vignette -->
                     <figcaption style="margin-top: 8px; font-size: 0.9rem; font-weight: 600; color: var(--text-color);">
@@ -378,7 +423,7 @@
                 <!-- Photo 1 -->
                 <div class="gallery-item" style="max-width: 220px;">
                     <a href="./images/brunch2.jpg" target="_blank" title="Cliquer pour ouvrir en taille réelle">
-                        <img src="./images/brunch2.jpg" alt="Buffet du Brunch à Maylis - Photo 1" style="width: 100%; height: auto; display: block; border-radius: 6px; transition: transform 0.2s;">
+                        <img src="./images/brunch2.jpg" alt="Buffet du Brunch - Photo 1" style="width: 100%; height: auto; display: block; border-radius: 6px; transition: transform 0.2s;">
                     </a>
                  <!-- Titre sous la vignette -->
                     <figcaption style="margin-top: 8px; font-size: 0.9rem; font-weight: 600; color: var(--text-color);">
@@ -388,7 +433,7 @@
                <!-- Photo 4 -->
                 <div class="gallery-item" style="max-width: 220px;">
                     <a href="images/demicdm.jpg" target="_blank" title="Cliquer pour ouvrir en taille réelle">
-                        <img src="images/demicdm.jpg" alt="demi finale CDM à Maylis - photo 4" style="width: 100%; height: auto; display: block; border-radius: 6px; transition: transform 0.2s;">
+                        <img src="images/demicdm.jpg" alt="demi finale CDM - photo 4" style="width: 100%; height: auto; display: block; border-radius: 6px; transition: transform 0.2s;">
                     </a>
                 <!-- Titre sous la vignette -->
                     <figcaption style="margin-top: 8px; font-size: 0.9rem; font-weight: 600; color: var(--text-color);">
@@ -399,7 +444,7 @@
                <!-- Photo 2 -->
                 <div class="gallery-item" style="max-width: 220px;">
                     <a href="./images/crunch25.jpg" target="_blank" title="Cliquer pour ouvrir en taille réelle">
-                        <img src="./images/crunch25.jpg" alt="Retransmission du France Angleterre à Maylis - Photo 2" style="width: 100%; height: auto; display: block; border-radius: 6px; transition: transform 0.2s;">
+                        <img src="./images/crunch25.jpg" alt="Retransmission du France Angleterre - Photo 2" style="width: 100%; height: auto; display: block; border-radius: 6px; transition: transform 0.2s;">
                     </a>
                 <!-- Titre sous la vignette -->
                     <figcaption style="margin-top: 8px; font-size: 0.9rem; font-weight: 600; color: var(--text-color);">
@@ -409,7 +454,7 @@
              <!-- Photo 3 -->
                 <div class="gallery-item" style="max-width: 220px;">
                     <a href="./images/brunch1.jpg" target="_blank" title="Cliquer pour ouvrir en taille réelle">
-                        <img src="./images/brunch1.jpg" alt="brunch du 1 mars 2026 à Maylis - Photo 3" style="width: 100%; height: auto; display: block; border-radius: 6px; transition: transform 0.2s;">
+                        <img src="./images/brunch1.jpg" alt="brunch du 1 mars 2026 - Photo 3" style="width: 100%; height: auto; display: block; border-radius: 6px; transition: transform 0.2s;">
                     </a>
                 <!-- Titre sous la vignette -->
                     <figcaption style="margin-top: 8px; font-size: 0.9rem; font-weight: 600; color: var(--text-color);">
@@ -419,7 +464,7 @@
              <!-- Photo 5 -->
                 <div class="gallery-item" style="max-width: 220px;">
                     <a href="./images/halha.jpg" target="_blank" title="Cliquer pour ouvrir en taille réelle">
-                        <img src="./images/halha.jpg" alt="Halha de Nadau décembre 2025 à Mayis - Photo 5" style="width: 100%; height: auto; display: block; border-radius: 6px; transition: transform 0.2s;">
+                        <img src="./images/halha.jpg" alt="Halha de Nadau décembre 2025 - Photo 5" style="width: 100%; height: auto; display: block; border-radius: 6px; transition: transform 0.2s;">
                     </a>
                 <!-- Titre sous la vignette -->
                     <figcaption style="margin-top: 8px; font-size: 0.9rem; font-weight: 600; color: var(--text-color);">
@@ -429,19 +474,20 @@
                <!-- Photo 6 -->
                 <div class="gallery-item" style="max-width: 220px;">
                     <a href="./images/Halloween.jpg" target="_blank" title="Cliquer pour ouvrir en taille réelle">
-                        <img src="./images/Halloween.jpg" alt="Soirée halloween 2025 à Maylis - Photo 6" style="width: 100%; height: auto; display: block; border-radius: 6px; transition: transform 0.2s;">
+                        <img src="./images/Halloween.jpg" alt="Halha de Nadau décembre 2025 - Photo 6" style="width: 100%; height: auto; display: block; border-radius: 6px; transition: transform 0.2s;">
                     </a>
                 <!-- Titre sous la vignette -->
                     <figcaption style="margin-top: 8px; font-size: 0.9rem; font-weight: 600; color: var(--text-color);">
                         <s>Soirée Halloween du 31 octobre 2025</s>
                     </figcaption>
                 </div>
-<!-- Intégration du Calendrier Google -->
+</div> <!-- Fermeture de gallery-grid -->
+
+        <!-- Intégration du Calendrier Google -->
 <div class="calendar-container" style="margin: 40px auto 0 auto; width: 100%; max-width: 900px; padding: 0 15px; box-sizing: border-box;">
                     <iframe src="https://calendar.google.com/calendar/embed?src=lou.bam40%40gmail.com&ctz=Europe%2FParis" style="border: 0" width="800" height="600" frameborder="0" scrolling="no"></iframe> 
                     
         </div>
-
         </section>
 
 
@@ -458,14 +504,14 @@
                 <!-- Photo 1 -->
                 <div class="gallery-item" style="max-width: 220px;">
                     <a href="./images/brunch0926A.jpeg" target="_blank" title="Cliquer pour ouvrir en taille réelle">
-                        <img src="./images/brunch0926A.jpeg" alt="Buffet du Brunch à Maylis - Photo 1" style="width: 100%; height: auto; display: block; border-radius: 6px; transition: transform 0.2s;">
+                        <img src="./images/brunch0926A.jpeg" alt="Buffet du Brunch - Photo 1" style="width: 100%; height: auto; display: block; border-radius: 6px; transition: transform 0.2s;">
                     </a>
                 </div>
 
                 <!-- Photo 2 -->
                 <div class="gallery-item" style="max-width: 220px;">
                     <a href="./images/Brunch0926B.jpeg" alt="Buffet du Brunch - Photo 2" target="_blank" title="Cliquer pour ouvrir en taille réelle">
-                        <img src="./images/Brunch0926B.jpeg" alt="Buffet du Brunch à Maylis - Photo 2" style="width: 100%; height: auto; display: block; border-radius: 6px; transition: transform 0.2s;">
+                        <img src="./images/Brunch0926B.jpeg" alt="Buffet du Brunch - Photo 2" style="width: 100%; height: auto; display: block; border-radius: 6px; transition: transform 0.2s;">
                     </a>
                 </div>
 
@@ -503,14 +549,14 @@
                 <!-- Photo 1 -->
                 <div class="gallery-item" style="max-width: 220px;">
                     <a href="./images/halloween1.png" target="_blank" title="Cliquer pour ouvrir en taille réelle">
-                        <img src="./images/halloween1.png" alt="Halloween à Maylis - Photo 1" style="width: 100%; height: auto; display: block; border-radius: 6px; transition: transform 0.2s;">
+                        <img src="./images/halloween1.png" alt="Halloween - Photo 1" style="width: 100%; height: auto; display: block; border-radius: 6px; transition: transform 0.2s;">
                     </a>
                 </div>
 
                 <!-- Photo 2 -->
                 <div class="gallery-item" style="max-width: 220px;">
                     <a href="./images/halloween2.png" alt="Buffet du Brunch - Photo 2" target="_blank" title="Cliquer pour ouvrir en taille réelle">
-                        <img src="./images/halloween2.png" alt="Halloween à Maylis - Photo 2" style="width: 100%; height: auto; display: block; border-radius: 6px; transition: transform 0.2s;">
+                        <img src="./images/halloween2.png" alt="Halloween - Photo 2" style="width: 100%; height: auto; display: block; border-radius: 6px; transition: transform 0.2s;">
                     </a>
                 </div>
 
@@ -651,7 +697,7 @@
                     <p style="display: flex; align-items: center; gap: 10px; font-size: 1.05rem;">
                         📍 <strong>Adresse :</strong><br>
                         Salle de restauration<br>
-                        799 Avenue de la Chalosse<br>
+                        800 Avenue de la Chalosse<br>
                         40250 Maylis
                     </p>
                     <p style="display: flex; align-items: center; gap: 10px; font-size: 1.05rem;">
@@ -683,7 +729,7 @@
                 <div style="flex: 1; min-width: 280px; border-radius: 8px; overflow: hidden; box-shadow: 0 2px 8px rgba(0,0,0,0.1); min-height: 300px;">
                     <iframe 
                         title="Carte Google Maps - Lou BAM Maylis"
-                        src="https://maps.google.com/maps?q=799%20avenue%20de%20la%20chalosse%2040250%20Maylis&t=&z=15&ie=UTF8&iwloc=&output=embed" 
+                        src="https://maps.google.com/maps?q=800%20avenue%20de%20la%20chalosse%2040250%20Maylis&t=&z=15&ie=UTF8&iwloc=&output=embed" 
                         width="100%" 
                         height="100%" 
                         style="border:0; min-height: 300px;" 
@@ -699,6 +745,8 @@
     <footer>
         <p>&copy; 2026 Lou BAM - Bar Associatif Maylisien | Association MAYLIS'Cence</p>
     </footer>
-
+<!-- Éléments HTML ajoutés pour forcer l'affichage des rubans -->
+    <div class="ruban-gauche"></div>
+    <div class="ruban-droite"></div>
 </body>
 </html>
