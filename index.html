@@ -44,7 +44,7 @@
 
         .ruban-droite {
             right: 20px; /* Distance du bord droit */
-            background-image: url('images/ruban-rose.png');
+            background-image: url('images/ruban-vert.png');
         }
       
 	  /* En-tête et Navigation */
@@ -148,16 +148,32 @@
             margin: 15px 0 10px 0;
             font-size: 1.2rem;
         }
-	/* Style spécifique pour l'alerte de la marche rose */
-        .pink-alert {
-            background-color: #FFF1F2;
-            border-left: 5px solid var(--highlight-pink);
-            padding: 15px;
-            border-radius: 4px;
-            font-size: 1.2rem;
-            font-weight: bold;
-            color: #9F1239;
-            text-align: center;
+	/* Style pour le bandeau vert (Journée mondiale) */
+.green-alert {
+    background-color: #E8F5E9; /* Fond vert très clair pour la lisibilité */
+    border-left: 3px solid #008000; /* Cadre vert complet */
+    padding: 15px;
+    border-radius: 4px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #004d00; /* Texte vert foncé */
+    text-align: center;
+    margin-bottom: 15px; /* Espace entre les deux bandeaux */
+}
+
+/* Style pour le bandeau rose (Marche rose) */
+.pink-alert {
+    background-color: #FFF0F5; /* Fond rose très clair */
+    border-left: 5px solid #FF69B4; /* Ligne rose à gauche (ou mettez 'border' pour un cadre complet) */
+    padding: 15px;
+    border-radius: 4px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #9F1239; /* Texte bordeaux/rose foncé */
+    text-align: center;
+}
+}
+
 
         /* Grille commune uniforme (Modèle basé sur l'Accueil) */
         .section-grid {
@@ -352,6 +368,10 @@
 	<!-- Nouvelle Section Informations -->
         <section id="informations">
             <h2>Informations</h2>
+            <div class="green-alert">
+                 Journée mondiale du don d'organes, pensez-y. Samedi 17 octobre.
+            </div>
+
             <div class="pink-alert">
                 🎀 Marche rose à MAYLIS le samedi 31 octobre 2026.
             </div>
@@ -697,7 +717,7 @@
                     <p style="display: flex; align-items: center; gap: 10px; font-size: 1.05rem;">
                         📍 <strong>Adresse :</strong><br>
                         Salle de restauration<br>
-                        799 Avenue de la Chalosse<br>
+                        800 Avenue de la Chalosse<br>
                         40250 Maylis
                     </p>
                     <p style="display: flex; align-items: center; gap: 10px; font-size: 1.05rem;">
@@ -729,7 +749,7 @@
                 <div style="flex: 1; min-width: 280px; border-radius: 8px; overflow: hidden; box-shadow: 0 2px 8px rgba(0,0,0,0.1); min-height: 300px;">
                     <iframe 
                         title="Carte Google Maps - Lou BAM Maylis"
-                        src="https://maps.google.com/maps?q=799%20avenue%20de%20la%20chalosse%2040250%20Maylis&t=&z=15&ie=UTF8&iwloc=&output=embed" 
+                        src="https://maps.google.com/maps?q=800%20avenue%20de%20la%20chalosse%2040250%20Maylis&t=&z=15&ie=UTF8&iwloc=&output=embed" 
                         width="100%" 
                         height="100%" 
                         style="border:0; min-height: 300px;" 
