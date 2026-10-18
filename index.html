@@ -44,7 +44,7 @@
 
         .ruban-droite {
             right: 20px; /* Distance du bord droit */
-            background-image: url('images/ruban-vert.png');
+            background-image: url('images/ruban-rose.png');
         }
       
 	  /* En-tête et Navigation */
@@ -148,7 +148,20 @@
             margin: 15px 0 10px 0;
             font-size: 1.2rem;
         }
-        /* Style pour le bandeau rose (Marche rose) */
+	/* Style pour le bandeau vert (Journée mondiale) */
+.green-alert {
+    background-color: #E8F5E9; /* Fond vert très clair pour la lisibilité */
+    border-left: 5px solid #008000; /* Cadre vert complet */
+    padding: 15px;
+    border-radius: 4px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #004d00; /* Texte vert foncé */
+    text-align: center;
+    margin-bottom: 15px; /* Espace entre les deux bandeaux */
+}
+
+/* Style pour le bandeau rose (Marche rose) */
 .pink-alert {
     background-color: #FFF0F5; /* Fond rose très clair */
     border-left: 5px solid #FF69B4; /* Ligne rose à gauche (ou mettez 'border' pour un cadre complet) */
@@ -158,19 +171,7 @@
     font-weight: bold;
     color: #9F1239; /* Texte bordeaux/rose foncé */
     text-align: center;
-}
-		
-		/* Style pour le bandeau vert (Journée mondiale) */
-.green-alert {
-    background-color: #E8F5E9; /* Fond vert très clair pour la lisibilité */
-    border-left: 3px solid #008000; /* Cadre vert complet */
-    padding: 15px;
-    border-radius: 4px;
-    font-size: 1.2rem;
-    font-weight: bold;
-    color: #004d00; /* Texte vert foncé */
-    text-align: center;
-    margin-bottom: 15px; /* Espace entre les deux bandeaux */
+
 }
 
 
@@ -367,12 +368,17 @@
 	<!-- Nouvelle Section Informations -->
         <section id="informations">
             <h2>Informations</h2>
-			<div class="pink-alert">
-                A l'affiche : 🎀 Marche rose à MAYLIS le samedi 31 octobre 2026.
+
+            <div class="pink-alert">
+                A l'affiche  :🎀 Marche rose à MAYLIS le samedi 31 octobre 2026.
+
             </div>
+
             <div class="green-alert">
-                 A venir : Journée mondiale du don d'organes, pensez-y. Samedi 17 octobre.
+                 A venir : Balade au mont Ursuya. Samedi 14 novembre.<br>
+                           Histoires et Cabaret : Toi & moi dans le même pyjama. Dimanche 15 novembre.
             </div>
+
             
         </section>
 
@@ -625,78 +631,114 @@
                 </div>
 
                 <!-- Sélection des produits -->
-                <div style="background-color: var(--bg-color); padding: 15px; border-radius: 6px;">
-                    <h3 style="color: var(--primary-color); font-size: 1.1rem; margin-bottom: 15px;">Choisissez vos produits</h3>
-                    
-                    <div style="display: flex; flex-direction: column; gap: 10px;">
-                        
-                        <!-- Pain complet -->
-                        <div style="display: flex; justify-content: space-between; align-items: center; background: white; padding: 8px 12px; border-radius: 4px; border: 1px solid #ddd;">
-                            <label for="qte_pain_complet" style="font-weight: 500;">Pain complet (3.50 €)</label>
-                            <input type="number" id="qte_pain_complet" name="Pain Complet (3.50€)" min="0" value="0" style="width: 60px; padding: 5px; text-align: center; border: 1px solid #ccc; border-radius: 4px;">
-                        </div>
+<div style="background-color: var(--bg-color); padding: 15px; border-radius: 6px;">
+    <h3 style="color: var(--primary-color); font-size: 1.1rem; margin-bottom: 15px;">Choisissez vos produits</h3>
+    
+    <div style="display: flex; flex-direction: column; gap: 10px;">
+        
+        <!-- Pain complet -->
+        <div style="display: flex; flex-direction: column; gap: 8px; background: white; padding: 10px 12px; border-radius: 4px; border: 1px solid #ddd;">
+            <div style="display: flex; justify-content: space-between; align-items: center;">
+                <label for="qte_pain_complet" style="font-weight: 500;">Pain complet (3.50 €)</label>
+                <input type="number" id="qte_pain_complet" name="Pain Complet (3.50€)" min="0" value="0" style="width: 60px; padding: 5px; text-align: center; border: 1px solid #ccc; border-radius: 4px;">
+            </div>
+            <div style="display: flex; gap: 15px; font-size: 0.9rem; color: #555; padding-top: 4px; border-top: 1px dashed #eee;">
+                <span>Tranché :</span>
+                <label><input type="radio" name="tranche_pain_complet" value="non" checked> Non</label>
+                <label><input type="radio" name="tranche_pain_complet" value="oui"> Oui</label>
+            </div>
+        </div>
 
-                        <!-- Pain aux blés anciens -->
-                        <div style="display: flex; justify-content: space-between; align-items: center; background: white; padding: 8px 12px; border-radius: 4px; border: 1px solid #ddd;">
-                            <label for="qte_bles_anciens" style="font-weight: 500;">Pain aux blés anciens (3.60 €)</label>
-                            <input type="number" id="qte_bles_anciens" name="Pain Bles Anciens (3.60€)" min="0" value="0" style="width: 60px; padding: 5px; text-align: center; border: 1px solid #ccc; border-radius: 4px;">
-                        </div>
+        <!-- Pain aux blés anciens -->
+        <div style="display: flex; flex-direction: column; gap: 8px; background: white; padding: 10px 12px; border-radius: 4px; border: 1px solid #ddd;">
+            <div style="display: flex; justify-content: space-between; align-items: center;">
+                <label for="qte_bles_anciens" style="font-weight: 500;">Pain aux blés anciens (3.60 €)</label>
+                <input type="number" id="qte_bles_anciens" name="Pain Bles Anciens (3.60€)" min="0" value="0" style="width: 60px; padding: 5px; text-align: center; border: 1px solid #ccc; border-radius: 4px;">
+            </div>
+            <div style="display: flex; gap: 15px; font-size: 0.9rem; color: #555; padding-top: 4px; border-top: 1px dashed #eee;">
+                <span>Tranché :</span>
+                <label><input type="radio" name="tranche_bles_anciens" value="non" checked> Non</label>
+                <label><input type="radio" name="tranche_bles_anciens" value="oui"> Oui</label>
+            </div>
+        </div>
 
-                        <!-- Pain au seigle -->
-                        <div style="display: flex; justify-content: space-between; align-items: center; background: white; padding: 8px 12px; border-radius: 4px; border: 1px solid #ddd;">
-                            <label for="qte_seigle" style="font-weight: 500;">Pain au seigle (3.40 €)</label>
-                            <input type="number" id="qte_seigle" name="Pain au Seigle (3.40€)" min="0" value="0" style="width: 60px; padding: 5px; text-align: center; border: 1px solid #ccc; border-radius: 4px;">
-                        </div>
+        <!-- Pain au seigle -->
+        <div style="display: flex; flex-direction: column; gap: 8px; background: white; padding: 10px 12px; border-radius: 4px; border: 1px solid #ddd;">
+            <div style="display: flex; justify-content: space-between; align-items: center;">
+                <label for="qte_seigle" style="font-weight: 500;">Pain au seigle (3.40 €)</label>
+                <input type="number" id="qte_seigle" name="Pain au Seigle (3.40€)" min="0" value="0" style="width: 60px; padding: 5px; text-align: center; border: 1px solid #ccc; border-radius: 4px;">
+            </div>
+            <div style="display: flex; gap: 15px; font-size: 0.9rem; color: #555; padding-top: 4px; border-top: 1px dashed #eee;">
+                <span>Tranché :</span>
+                <label><input type="radio" name="tranche_seigle" value="non" checked> Non</label>
+                <label><input type="radio" name="tranche_seigle" value="oui"> Oui</label>
+            </div>
+        </div>
 
-                        <!-- Pain aux noix -->
-                        <div style="display: flex; justify-content: space-between; align-items: center; background: white; padding: 8px 12px; border-radius: 4px; border: 1px solid #ddd;">
-                            <label for="qte_noix" style="font-weight: 500;">Pain aux noix (3.40 €)</label>
-                            <input type="number" id="qte_noix" name="Pain aux Noix (3.40€)" min="0" value="0" style="width: 60px; padding: 5px; text-align: center; border: 1px solid #ccc; border-radius: 4px;">
-                        </div>
+        <!-- Pain aux noix -->
+        <div style="display: flex; flex-direction: column; gap: 8px; background: white; padding: 10px 12px; border-radius: 4px; border: 1px solid #ddd;">
+            <div style="display: flex; justify-content: space-between; align-items: center;">
+                <label for="qte_noix" style="font-weight: 500;">Pain aux noix (3.40 €)</label>
+                <input type="number" id="qte_noix" name="Pain aux Noix (3.40€)" min="0" value="0" style="width: 60px; padding: 5px; text-align: center; border: 1px solid #ccc; border-radius: 4px;">
+            </div>
+            <div style="display: flex; gap: 15px; font-size: 0.9rem; color: #555; padding-top: 4px; border-top: 1px dashed #eee;">
+                <span>Tranché :</span>
+                <label><input type="radio" name="tranche_noix" value="non" checked> Non</label>
+                <label><input type="radio" name="tranche_noix" value="oui"> Oui</label>
+            </div>
+        </div>
 
-                        <!-- Pain de petit épeautre -->
-                        <div style="display: flex; justify-content: space-between; align-items: center; background: white; padding: 8px 12px; border-radius: 4px; border: 1px solid #ddd;">
-                            <label for="qte_epeautre" style="font-weight: 500;">Pain de petit épeautre (3.50 €)</label>
-                            <input type="number" id="qte_epeautre" name="Pain Petit Epeautre (3.50€)" min="0" value="0" style="width: 60px; padding: 5px; text-align: center; border: 1px solid #ccc; border-radius: 4px;">
-                        </div>
+        <!-- Pain de petit épeautre -->
+        <div style="display: flex; flex-direction: column; gap: 8px; background: white; padding: 10px 12px; border-radius: 4px; border: 1px solid #ddd;">
+            <div style="display: flex; justify-content: space-between; align-items: center;">
+                <label for="qte_epeautre" style="font-weight: 500;">Pain de petit épeautre (3.50 €)</label>
+                <input type="number" id="qte_epeautre" name="Pain Petit Epeautre (3.50€)" min="0" value="0" style="width: 60px; padding: 5px; text-align: center; border: 1px solid #ccc; border-radius: 4px;">
+            </div>
+            <div style="display: flex; gap: 15px; font-size: 0.9rem; color: #555; padding-top: 4px; border-top: 1px dashed #eee;">
+                <span>Tranché :</span>
+                <label><input type="radio" name="tranche_epeautre" value="non" checked> Non</label>
+                <label><input type="radio" name="tranche_epeautre" value="oui"> Oui</label>
+            </div>
+        </div>
 
-                        <!-- Baguette -->
-                        <div style="display: flex; justify-content: space-between; align-items: center; background: white; padding: 8px 12px; border-radius: 4px; border: 1px solid #ddd;">
-                            <label for="qte_baguette" style="font-weight: 500;">Baguette (1.20 €)</label>
-                            <input type="number" id="qte_baguette" name="Baguette (1.20€)" min="0" value="0" style="width: 60px; padding: 5px; text-align: center; border: 1px solid #ccc; border-radius: 4px;">
-                        </div>
+        <!-- Baguette (Pas d'option tranché) -->
+        <div style="display: flex; justify-content: space-between; align-items: center; background: white; padding: 8px 12px; border-radius: 4px; border: 1px solid #ddd;">
+            <label for="qte_baguette" style="font-weight: 500;">Baguette (1.20 €)</label>
+            <input type="number" id="qte_baguette" name="Baguette (1.20€)" min="0" value="0" style="width: 60px; padding: 5px; text-align: center; border: 1px solid #ccc; border-radius: 4px;">
+        </div>
 
-                        <!-- Croquinette -->
-                        <div style="display: flex; justify-content: space-between; align-items: center; background: white; padding: 8px 12px; border-radius: 4px; border: 1px solid #ddd;">
-                            <label for="qte_croquinette" style="font-weight: 500;">Croquinette (1.35 €)</label>
-                            <input type="number" id="qte_croquinette" name="Croquinette (1.35€)" min="0" value="0" style="width: 60px; padding: 5px; text-align: center; border: 1px solid #ccc; border-radius: 4px;">
-                        </div>
+        <!-- Croquinette -->
+        <div style="display: flex; justify-content: space-between; align-items: center; background: white; padding: 8px 12px; border-radius: 4px; border: 1px solid #ddd;">
+            <label for="qte_croquinette" style="font-weight: 500;">Croquinette (1.35 €)</label>
+            <input type="number" id="qte_croquinette" name="Croquinette (1.35€)" min="0" value="0" style="width: 60px; padding: 5px; text-align: center; border: 1px solid #ccc; border-radius: 4px;">
+        </div>
 
-                        <!-- Chocolatine -->
-                        <div style="display: flex; justify-content: space-between; align-items: center; background: white; padding: 8px 12px; border-radius: 4px; border: 1px solid #ddd;">
-                            <label for="qte_chocolatine" style="font-weight: 500;">Chocolatine (1.20 €)</label>
-                            <input type="number" id="qte_chocolatine" name="Chocolatine (1.20€)" min="0" value="0" style="width: 60px; padding: 5px; text-align: center; border: 1px solid #ccc; border-radius: 4px;">
-                        </div>
+        <!-- Chocolatine -->
+        <div style="display: flex; justify-content: space-between; align-items: center; background: white; padding: 8px 12px; border-radius: 4px; border: 1px solid #ddd;">
+            <label for="qte_chocolatine" style="font-weight: 500;">Chocolatine (1.20 €)</label>
+            <input type="number" id="qte_chocolatine" name="Chocolatine (1.20€)" min="0" value="0" style="width: 60px; padding: 5px; text-align: center; border: 1px solid #ccc; border-radius: 4px;">
+        </div>
 
-                        <!-- Croissant -->
-                        <div style="display: flex; justify-content: space-between; align-items: center; background: white; padding: 8px 12px; border-radius: 4px; border: 1px solid #ddd;">
-                            <label for="qte_croissant" style="font-weight: 500;">Croissant (1.20 €)</label>
-                            <input type="number" id="qte_croissant" name="Croissant (1.20€)" min="0" value="0" style="width: 60px; padding: 5px; text-align: center; border: 1px solid #ccc; border-radius: 4px;">
-                        </div>
+        <!-- Croissant -->
+        <div style="display: flex; justify-content: space-between; align-items: center; background: white; padding: 8px 12px; border-radius: 4px; border: 1px solid #ddd;">
+            <label for="qte_croissant" style="font-weight: 500;">Croissant (1.20 €)</label>
+            <input type="number" id="qte_croissant" name="Croissant (1.20€)" min="0" value="0" style="width: 60px; padding: 5px; text-align: center; border: 1px solid #ccc; border-radius: 4px;">
+        </div>
 
-                        <!-- Pain aux raisins -->
-                        <div style="display: flex; justify-content: space-between; align-items: center; background: white; padding: 8px 12px; border-radius: 4px; border: 1px solid #ddd;">
-                            <label for="qte_raisins" style="font-weight: 500;">Pain aux raisins (1.40 €)</label>
-                            <input type="number" id="qte_raisins" name="Pain aux Raisins (1.40€)" min="0" value="0" style="width: 60px; padding: 5px; text-align: center; border: 1px solid #ccc; border-radius: 4px;">
-                        </div>
+        <!-- Pain aux raisins -->
+        <div style="display: flex; justify-content: space-between; align-items: center; background: white; padding: 8px 12px; border-radius: 4px; border: 1px solid #ddd;">
+            <label for="qte_raisins" style="font-weight: 500;">Pain aux raisins (1.40 €)</label>
+            <input type="number" id="qte_raisins" name="Pain aux Raisins (1.40€)" min="0" value="0" style="width: 60px; padding: 5px; text-align: center; border: 1px solid #ccc; border-radius: 4px;">
+        </div>
 
-                        <!-- Journal Sud Ouest Dimanche -->
-                        <div style="display: flex; justify-content: space-between; align-items: center; background: white; padding: 8px 12px; border-radius: 4px; border: 1px solid #ddd;">
-                            <label for="qte_sud_ouest" style="font-weight: 500;">Journal Sud Ouest Dimanche (2.30 €)</label>
-                            <input type="number" id="qte_sud_ouest" name="Journal Sud Ouest (2.30€)" min="0" value="0" style="width: 60px; padding: 5px; text-align: center; border: 1px solid #ccc; border-radius: 4px;">
-                        </div>
+        <!-- Journal Sud Ouest Dimanche -->
+        <div style="display: flex; justify-content: space-between; align-items: center; background: white; padding: 8px 12px; border-radius: 4px; border: 1px solid #ddd;">
+            <label for="qte_sud_ouest" style="font-weight: 500;">Journal Sud Ouest Dimanche (2.30 €)</label>
+            <input type="number" id="qte_sud_ouest" name="Journal Sud Ouest (2.30€)" min="0" value="0" style="width: 60px; padding: 5px; text-align: center; border: 1px solid #ccc; border-radius: 4px;">
+        </div>
 
-                    </div>
+    </div>
+</div>
                 </div>
 
                 <button type="submit" style="background-color: var(--secondary-color); color: white; border: none; padding: 14px; border-radius: 4px; font-size: 1.1rem; font-weight: bold; cursor: pointer; transition: background 0.3s;">
