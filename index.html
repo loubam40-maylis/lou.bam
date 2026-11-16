@@ -345,7 +345,7 @@
             <nav>
                 <ul>
                     <li><a href="#informations">Informations</a></li>
-		    <li><a href="#accueil">Accueil</a></li>
+		            <li><a href="#actualités">Actualités</a></li>
                     <li><a href="#agenda">Agenda</a></li>
                     <li><a href="#manifestations">Manifestations</a></li>
                     <li><a href="#galerie">Galeries</a></li>
@@ -370,12 +370,14 @@
             <h2>Informations</h2>
 
             <div class="pink-alert">
-                A l'affiche  : Histoires & Cabaret "Toi et moi dans le même pyjama" Dimanche 15 novembre 2026.
-
+                A l'affiche  : Dimanche 22 novembre. A partir de 15h, après-midi tarot et belote.<br>
             </div>
 
             <div class="green-alert">
-                 A venir : TELETHON Samedi 5 décembre.<br>
+                 A venir : 
+                           <p>Samedi 5 décembre : Télethon<br></p>
+                           <p>Samedi 19 Décembre : Halha des Nadau<br></p>
+                            
                             
                             
             </div>
@@ -383,27 +385,53 @@
             
         </section>
 
-        <!-- Section Accueil -->
-        <section id="accueil">
-            <h2>Accueil & Présentation</h2>
+        <!-- Section actualités -->
+        <section id="actualités">
+            <h2>Actualités</h2>
             <div class="about-grid">
                 <div class="about-text">
-                    <p>Née en mars 2025, l’association <strong>MAYLIS’Cence</strong> a été créée pour proposer à la population de MAYLIS d’autres manifestations et services, autres que celles organisées par le Comité des Fêtes Maylis. Association avec laquelle Lou BAM collabore régulièrement. Les premières initiatives ont été la création d’un débit de boissons et d’un dépôt de pain.</p>
-                    <p>La commune a permis à l’association de prendre ses quartiers dans la salle de restauration. Cette salle offre toutes les commodités : bar, chambres froides, cuisine, lieu de stockage, etc.</p>
-                    <p>Au fil du temps, le nom <strong>« LOU BAM »</strong> (acronyme de <em>« Lou Bar Associatif Maylisien »</em>) s'est imposé et a progressivement supplanté le nom officiel pour désigner ce lieu chaleureux.</p>
-                </div>
+                                    
                 <div>
-                    <div style="display: flex; justify-content: center;">
-                    <img src="images/facade.jpg" alt="Façade du Lou BAM à Maylis" style="width: 60%; height: auto; border-radius: 6px; box-shadow: 0 2px 5px rgba(0,0,0,0.15);">
-                    </div>
-                </div>
+                  <div class="conteneur">
+  <img src="images/toietmoi.jpg" alt="Description de l'image" class="image-flottante">
+  <p><strong>Spectacle : "Toi et Moi dans le même pyjama" :</strong><br> ce dimanche 15 novembre 2026, Lou BAM proposait un spectacle. Pendant une heure environ, Nathalie et Christian ont amusé le public présent. Mêlant chansons, contes, et les périnigrations d'une fourmis qui auront été le fil rouge du spectable, ils ont tenu en haleine les spectatrices et spectateurs</p>
+                    <p>A la fin du spectacle, le public ont pu se restaurer avec des crèpes et gaufres faites maison, et les plus gourmands auront rajouté le napage de leur choix</p>
+                    <p> Un grand merci à Nathalie et Christian, pour leur gentillesse et de nous avoir fait passer un très bon moment</p>
+                
+
+               <div class="conteneur">
+  <img src="images/marcherose.jpg" alt="Description de l'image" class="image-flottante">
+  <p><strong>Octobre rose :</strong><br> le samedi 31 octobre 2026, Lou BAM, en association avec le comité des fêtes de Maylis, organisait une manifestation dédiée à la recherche contre le cancer du sein. Toute la recette de cette journée sera remise l'association "La Holi"</p>
+                    <p>Cette journée a commencé par l'accueil des participants autour d'un café, qui allaient s'élancer sur le parcours de 10 ou 5 kilomètres.</p>
+                    <p> A l'issue de cette balade sur les chemins maylisiens, ceux qui ont voulu ont pu se restaurer. Au menu : velouté de butternut, rougail saucisses et son riz, pastis crème.</p>
+                <p> Gràce à la générosité des présents, des bénévoles, des associations, cette journée a récolté la jolie somme d'environ 1200 € qui sera remise à la présidente de la Holi. Merci à tous.
+      </p>
+</div>
+                    <style>
+  .conteneur {
+    width: 100%;
+    overflow: hidden; /* Permet au conteneur d'englober l'élément flottant */
+  }
+
+  .image-flottante {
+    float: right;        /* Place l'image à gauche et fait couler le texte à droite (utilisez "right" pour l'inverse) */
+    width: 300px;       /* Ajustez la largeur de l'image */
+    margin-right: 20px; /* Espace entre l'image et le texte */
+    margin-bottom: 20px;/* Espace en bas si le texte dépasse la hauteur de l'image */
+    border-radius: 8px; /* Optionnel : arrondir les coins */
+  }
+
+  p {
+    text-align: justify; /* Optionnel : aligne le texte proprement */
+  }
+</style>
             </div>
         </section>
 
         <!-- Section Agenda -->
         <section id="agenda">
             <h2>Agenda</h2>
-     <h3 style="margin-top:20px; color: var(--primary-color);">Prochaine manifestation : Dimanche 15 novembre 2026 : Histoire & Cabaret : à inscrire sur vos agendas</h3>
+     <h3 style="margin-top:20px; color: var(--primary-color);">Prochaine manifestation : Dimanche 22 novembre 2026 à partir de 15 heures: Belote et Tarot</h3>
      
             <div class="about-grid">
                 <div class="about-text">
@@ -413,7 +441,19 @@
 
                    <!-- Grille avec photos plus petites et cliquables -->
 <div class="gallery-grid" style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 15px; width: 100%; box-sizing: border-box;">
-    
+    <!-- Photo 9 -->
+    <div class="gallery-item" style="box-sizing: border-box; display: flex; flex-direction: column; justify-content: space-between;">
+        <div style="width: 100%;">
+            <a href="./images/belote.jpg" target="_blank" title="Cliquer pour ouvrir en taille réelle" style="display: block; overflow: hidden; border-radius: 6px;">
+                <img src="./images/belote.jpg" alt="Belote et tarot - Photo 8" style="width: 100%; height: auto; display: block; transition: transform 0.2s;">
+            </a>
+            <!-- Titre sous la vignette -->
+            <figcaption style="margin-top: 8px; font-size: 0.9rem; font-weight: 600; color: var(--text-color);">
+                Belote et Tarot Dimanche 22 novembre 2026 15 heures
+            </figcaption>
+        </div>
+    </div>
+
     <!-- Photo 8 -->
     <div class="gallery-item" style="box-sizing: border-box; display: flex; flex-direction: column; justify-content: space-between;">
         <div style="width: 100%;">
@@ -422,7 +462,7 @@
             </a>
             <!-- Titre sous la vignette -->
             <figcaption style="margin-top: 8px; font-size: 0.9rem; font-weight: 600; color: var(--text-color);">
-                Histoire & Cabaret 15 novembre octobre 2026
+                <s>Histoire & Cabaret 15 novembre octobre 2026</s>
             </figcaption>
         </div>
     </div>
@@ -545,6 +585,8 @@
                 <li class="event-card">🎀 Octobre Rose</li>
                 <li class="event-card">⚪ Pétanque</li>
                 <li class="event-card">🚶🥾 Marche et Randonnée</li>
+                <li class="event-card"> Spectacle "Toi & moi dans le même pyjama</li>
+
             </ul>
             <p style="margin-top: 15px; font-style: italic;">D'autres projets sont à venir : randonnées, sorties culturelles et festives...</p>
                </section>
@@ -557,6 +599,39 @@
             <h2>Galerie Photos & Vidéos</h2>
             <p>Cliquez sur une photo pour l'agrandir dans un nouvel onglet.</p>
             
+           <h3 style="margin-top:20px; color: var(--primary-color);">Spectacle du dimanche 15 novembre : "Toi et Moi dans le même pyjama :</h3>
+            
+            <!-- Grille avec photos plus petites et cliquables -->
+            <div class="gallery-grid" style="display: flex; gap: 15px; flex-wrap: wrap;">
+                
+                <!-- Photo 1 -->
+                <div class="gallery-item" style="max-width: 220px;">
+                    <a href="./images/toietmoi.jpg" target="_blank" title="Cliquer pour ouvrir en taille réelle">
+                        <img src="./images/toietmoi.jpg" alt="pyjama - Photo 1" style="width: 100%; height: auto; display: block; border-radius: 6px; transition: transform 0.2s;">
+                    </a>
+                </div>
+
+                <!-- Photo 2 -->
+                <div class="gallery-item" style="max-width: 220px;">
+                    <a href="./images/toi&moi2.jpg" alt="pyjama - Photo 2" target="_blank" title="Cliquer pour ouvrir en taille réelle">
+                        <img src="./images/toi&moi2.jpg" alt="Buffet du Brunch - Photo 2" style="width: 100%; height: auto; display: block; border-radius: 6px; transition: transform 0.2s;">
+                    </a>
+                </div>
+
+            </div>
+
+            <!-- Bloc pour la vidéo -->
+            <div style="margin-top: 25px;">
+                <h4 style="margin-bottom: 10px; color: var(--secondary-color);">Vidéo de l'événement :</h4>
+                <video controls width="100%" style="max-width: 400px; border-radius: 6px; box-shadow: 0 2px 8px rgba(0,0,0,0.15); display: block;">
+                    <source src="./images/toietmoi.mp4" type="video/mp4">
+                    Votre navigateur ne prend pas en charge la lecture de vidéos.
+                </video>
+            </div>
+
+
+
+
             <h3 style="margin-top:20px; color: var(--primary-color);">Brunch du 27 septembre 2026 :</h3>
             
             <!-- Grille avec photos plus petites et cliquables -->
@@ -622,6 +697,7 @@
                 </div>
 
         </section>
+
 
         <!-- Section Commandes -->
         <section id="commandes">
