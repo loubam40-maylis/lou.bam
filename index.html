@@ -39,12 +39,12 @@
 
         .ruban-gauche {
             left: 20px; /* Distance du bord gauche */
-            background-image: url('images/toietmoi.jpg');
+            background-image: url('images/belote.jpg');
         }
 
         .ruban-droite {
             right: 20px; /* Distance du bord droit */
-            background-image: url('images/toietmoi.jpg');
+            background-image: url('images/belote.jpg');
         }
       
 	  /* En-tête et Navigation */
@@ -156,7 +156,7 @@
     border-radius: 4px;
     font-size: 1.2rem;
     font-weight: bold;
-    color: #004d00; /* Texte vert foncé */
+    color: #FF0000; /* Texte rouge vif*/
     text-align: center;
     margin-bottom: 15px; /* Espace entre les deux bandeaux */
 }
@@ -169,7 +169,7 @@
     border-radius: 4px;
     font-size: 1.8rem;
     font-weight: bold;
-    color: #FFA500; /* Texte bordeaux/rose foncé */
+    color: #FFA500; /* Texte orange foncé */
     text-align: center;
 
 }
@@ -345,7 +345,7 @@
             <nav>
                 <ul>
                     <li><a href="#informations">Informations</a></li>
-		            <li><a href="#actualités">Actualités</a></li>
+		    <li><a href="#actualités">Actualités</a></li>
                     <li><a href="#agenda">Agenda</a></li>
                     <li><a href="#manifestations">Manifestations</a></li>
                     <li><a href="#galerie">Galeries</a></li>
@@ -360,7 +360,7 @@
     <div class="hero">
         <h1>Bienvenue au BAM</h1>
         <img src="./images/logo.jpg" alt="Logo Lou BAM" style="max-height: 100px; width: auto; margin-left: auto;">
-       <p>Le bar associatif Maylisien.</p>
+       <p style="text-align: center;">Le bar associatif Maylisien</p>
     </div>
 
     <div class="container">
@@ -375,8 +375,8 @@
 
             <div class="green-alert">
                  A venir : 
-                           <p>Samedi 5 décembre : Télethon<br></p>
-                           <p>Samedi 19 Décembre : Halha des Nadau<br></p>
+                           <p>Samedi 5 décembre : Télethon.<br></p>
+                           <p>Samedi 19 Décembre : Halha des Nadau</p>
                             
                             
                             
@@ -393,14 +393,14 @@
                                     
                 <div>
                   <div class="conteneur">
-  <img src="images/toietmoi.jpg" alt="Description de l'image" class="image-flottante">
+  <img src="images/toietmoi.jpg" alt="Nathalie et Christian" class="image-flottante">
   <p><strong>Spectacle : "Toi et Moi dans le même pyjama" :</strong><br> ce dimanche 15 novembre 2026, Lou BAM proposait un spectacle. Pendant une heure environ, Nathalie et Christian ont amusé le public présent. Mêlant chansons, contes, et les périnigrations d'une fourmis qui auront été le fil rouge du spectable, ils ont tenu en haleine les spectatrices et spectateurs</p>
                     <p>A la fin du spectacle, le public ont pu se restaurer avec des crèpes et gaufres faites maison, et les plus gourmands auront rajouté le napage de leur choix</p>
                     <p> Un grand merci à Nathalie et Christian, pour leur gentillesse et de nous avoir fait passer un très bon moment</p>
                 
 
                <div class="conteneur">
-  <img src="images/marcherose.jpg" alt="Description de l'image" class="image-flottante">
+  <img src="images/marcherose.jpg" alt="Départ de la marche rose" class="image-flottante">
   <p><strong>Octobre rose :</strong><br> le samedi 31 octobre 2026, Lou BAM, en association avec le comité des fêtes de Maylis, organisait une manifestation dédiée à la recherche contre le cancer du sein. Toute la recette de cette journée sera remise l'association "La Holi"</p>
                     <p>Cette journée a commencé par l'accueil des participants autour d'un café, qui allaient s'élancer sur le parcours de 10 ou 5 kilomètres.</p>
                     <p> A l'issue de cette balade sur les chemins maylisiens, ceux qui ont voulu ont pu se restaurer. Au menu : velouté de butternut, rougail saucisses et son riz, pastis crème.</p>
@@ -589,7 +589,11 @@
 
             </ul>
             <p style="margin-top: 15px; font-style: italic;">D'autres projets sont à venir : randonnées, sorties culturelles et festives...</p>
-               </section>
+               
+
+</div>
+
+</section>
         
         
 
@@ -695,9 +699,10 @@
                         <img src="./images/halloween2.png" alt="Halloween - Photo 2" style="width: 100%; height: auto; display: block; border-radius: 6px; transition: transform 0.2s;">
                     </a>
                 </div>
-
+                 </div>  
         </section>
 
+        
 
         <!-- Section Commandes -->
         <section id="commandes">
@@ -851,16 +856,18 @@
 </div>
                 </div>
 
-                <button type="submit" style="background-color: var(--secondary-color); color: white; border: none; padding: 14px; border-radius: 4px; font-size: 1.1rem; font-weight: bold; cursor: pointer; transition: background 0.3s;">
-                    🥖 Envoyer ma commande par Email
-                </button>
+                <button type="submit" style="align-self: center; background-color: var(--secondary-color); color: white; border: none; padding: 14px 28px; border-radius: 4px; font-size: 1.1rem; font-weight: bold; cursor: pointer; transition: background 0.3s;">
+        🥖 Envoyer ma commande par Email
+    </button>
 
             </form>
-        </section>
-        <!-- Section Contact -->
+         </div>
+       </section>
+       
+	        <!-- Section Contact -->
         <section id="contact">
             <h2>Contact & Localisation</h2>
-            
+            <div class="conteneur">
             <div style="display: flex; flex-wrap: wrap; gap: 30px; margin-top: 20px;">
                 
                 <!-- Informations de contact et Réseaux Sociaux -->
@@ -870,7 +877,7 @@
                     <p style="display: flex; align-items: center; gap: 10px; font-size: 1.05rem;">
                         📍 <strong>Adresse :</strong><br>
                         Salle de restauration<br>
-                        800 Avenue de la Chalosse<br>
+                        799 Avenue de la Chalosse<br>
                         40250 Maylis
                     </p>
                     <p style="display: flex; align-items: center; gap: 10px; font-size: 1.05rem;">
@@ -902,7 +909,7 @@
                 <div style="flex: 1; min-width: 280px; border-radius: 8px; overflow: hidden; box-shadow: 0 2px 8px rgba(0,0,0,0.1); min-height: 300px;">
                     <iframe 
                         title="Carte Google Maps - Lou BAM Maylis"
-                        src="https://maps.google.com/maps?q=800%20avenue%20de%20la%20chalosse%2040250%20Maylis&t=&z=15&ie=UTF8&iwloc=&output=embed" 
+                        src="https://maps.google.com/maps?q=799%20avenue%20de%20la%20chalosse%2040250%20Maylis&t=&z=15&ie=UTF8&iwloc=&output=embed" 
                         width="100%" 
                         height="100%" 
                         style="border:0; min-height: 300px;" 
@@ -918,8 +925,6 @@
     <footer>
         <p>&copy; 2026 Lou BAM - Bar Associatif Maylisien | Association MAYLIS'Cence</p>
     </footer>
-<!-- Éléments HTML ajoutés pour forcer l'affichage des rubans -->
-    <div class="ruban-gauche"></div>
-    <div class="ruban-droite"></div>
+
 </body>
 </html>
